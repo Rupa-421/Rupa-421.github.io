@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+
+body{
+    background-image: url('images/sky-bg.webp');
+    background-size: cover;
+    background-color: black;
+    color: white;
+    font-family:'Raleway',sans-serif;
+    font-size: 16px;
+}
+header{
+  position: fixed;
+  top:0;
+  z-index:999;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    backdrop-filter: blur(6px);
+    font-family: 'Raleway',serif;
+}
+nav > .right > ul{
+    display:flex;
+    justify-content: center;
+
+}
+nav .right ul li{
+    list-style:none;
+    margin:0 23px;
+}
+nav .right ul li a{
+    text-decoration: none;
+    color:white;
+}
+nav .right ul li a:hover{
+
+  text-decoration: underline rgb(26,161,234);
+  text-underline-offset: 1em;
+  text-decoration-thickness: 5px;
+}
+nav .left{
+    font-size:2rem;
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+.firstSection{
+    display: flex;
+    justify-content: space-around;
+    margin: 94px 0;
+}
+.firstSection> div{
+    width:40%;
+}
+
+
+.firstSection .leftSection{
+    font-size: 3rem;
+    margin:50px 0;
+}
+.firstSection .rightSection img{
+width:80%;
+margin:50px 0;
+height:300px;
+border-radius: 50%;
+border:5px solid rgb(26,161,234);
+animation: rotateY 2s linear ;
+animation-play-state: running;
+
+}
+.thirdSection .main-image{
+  width:80%;
+margin:50px 0;
+height:300px;
+border-radius: 50%;
+border:5px solid rgb(26,161,234);
+position: relative;
+z-index:90;
+display: block;
+}
+.thirdSection .dependant{
+  position:absolute;
+  width:100px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.skill1{
+  animation: moveSkill1 2s forwards;
+}
+.skill3{
+  animation:moveSkill3 2s forwards;
+}
+.skill7{
+  animation: moveSkill7 2s forwards;
+}
+.skill2{
+  animation: moveSkill2 2s forwards;
+}
+.skill4{
+  animation: moveSkill4 2s forwards;
+}
+.skill5{
+  animation: moveSkill5 2s forwards;
+}
+.skill6{
+  animation: moveSkill6 2s forwards;
+}
+.skill8{
+  animation: moveSkill8 2s forwards;
+}
+.skill9{
+  animation: moveSkill9 2s forwards;
+}
+@keyframes moveSkill1 {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 350px;
+  }
+}
+@keyframes moveSkill7 {
+  from{
+    top:50%;
+  }
+  to{
+    top:0%;
+  }
+}
+@keyframes moveSkill3 {
+  from {
+    left: 50%;
+  }
+  to {
+    left: -50px;
+  }
+}
+@keyframes moveSkill2 {
+  from {
+    left: 50%;
+    top:50%;
+  }
+  to {
+    left: -50px;
+    top:25%;
+  }
+}
+@keyframes moveSkill4 {
+  from {
+    left: 50%;
+    top:50%;
+  }
+  to {
+    left:350px;
+    top:25%;
+  }
+}
+@keyframes moveSkill5 {
+  from {
+    left: 50%;
+    top:50%;
+  }
+  to {
+    left:-50px;
+    top:75%;
+  }
+}
+@keyframes moveSkill6 {
+  from {
+    left: 50%;
+    top:50%;
+  }
+  to {
+    left:350px;
+    top:75%;
+  }
+}
+@keyframes moveSkill8 {
+  from {
+    left:50%;
+    top:50%;
+  }
+  to {
+    left:10%;
+    top:90%;
+  }
+}
+@keyframes moveSkill9 {
+  from {
+    left: 50%;
+    top:50%;
+  }
+  to {
+    left:78%;
+    top:90%;
+  }
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+}
+100% {
+    transform: rotateY(360deg);
+}
+}
+
+
+.light-theme{
+    color:rgb(26, 161, 234);
+}
+
+.secondSection{
+  height:100vh;
+  position:relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 500px;
+    background-color: #fff;
+    margin:60px 0;
+  }
+}
+.entries {
+  width:calc(100% - 80px);
+  max-width:800px;
+  margin:auto;
+  position: relative;
+  left:-5px;
+  .entry {
+    width:calc(50% - 80px);
+    float:left; 
+    padding:20px;
+    clear:both;
+    text-align:right;
+    &:not(:first-child) {
+      margin-top:-60px;
+    }
+    
+    .title {
+      font-size:32px;
+      margin-bottom:12px;
+      position: relative;
+      color:#fff;
+      &:before {
+        content: '';
+        position: absolute;
+        width:8px;
+        height:8px;
+        border:4px solid #ffffff;
+        background-color:#1D1D1D;
+        border-radius:100%;
+        top:50%;
+        transform:translateY(-50%);
+        right:-73px;
+        z-index:1000;
+      }
+      &.big:before {
+        width:24px;
+        height:24px;
+        transform:translate(8px,-50%);
+      }
+    }
+    .body {
+      color:#aaa;
+      p {
+        line-height:1.4em;
+      }
+    }
+    &:nth-child(2n) {
+      text-align:left;
+      float:right;
+      .title {
+        &:before {
+          left:-63px;
+        }
+        &.big:before {
+          transform:translate(-8px,-50%);
+        }
+      }
+    }
+  }
+}
+.container{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  margin:23px 0;
+  font-size:3rem;
+  color:rgb(26, 161, 234);
+  font-family: 'Raleway' sans-serif;
+}
+.inner-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.thirdSection .leftSection{
+  position: relative;
+}
+.thirdSection ul li{
+  
+  opacity: 0;
+ 
+}
+.falling-animation{
+  animation: fadeIn 1s ease-in-out forwards ;
+}
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+
+
+
+.fourthSection .rightSection svg{
+font-size:4rem;
+margin:5px;
+}
+.fourthSection .rightSection{
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  margin:250px 0 0 0;
+  display:flex;
+  justify-content: space-around;
+
+}
