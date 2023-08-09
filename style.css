@@ -324,16 +324,18 @@ display: block;
 
 
 
-.fourthSection .rightSection svg{
+.fourthSection .rightSection img{
 font-size:4rem;
 margin:5px;
+height:70px;
+width:70px;
 }
 .fourthSection .rightSection{
   display: flex;
   flex-direction: column;
 }
 footer{
-  margin:250px 0 0 0;
+  margin:178px 0 0 0;
   display:flex;
   justify-content: space-around;
 
