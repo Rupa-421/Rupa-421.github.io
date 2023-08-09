@@ -167,7 +167,14 @@ function animateOnScroll() {
 
 document.addEventListener("scroll", animateOnScroll);
 
-
+document.addEventListener("DOMContentLoaded", function() {
+  const rotatingDivision = document.querySelector(".firstSection .rightSection img");
+  
+  rotatingDivision.addEventListener("animationend", function() {
+    rotatingDivision.style.animation = "none"; // Remove the animation
+    rotatingDivision.style.transform = "rotateY(180deg)"; // Set final state
+  });
+});
 
  </script>
     </body>
