@@ -335,6 +335,17 @@ margin:5px;
 height:70px;
 width:70px;
 }
+.fourthSection .inner-container {
+  height:300px;
+}
+.fourthSection .rightSection img{
+  height:80px;
+}
+.fourthSection .rightSection img:hover{
+  border: 3px solid black !important;
+  background: white !important;
+  border-radius: 50% !important;
+}
 .fourthSection .rightSection{
   display: flex;
   flex-direction: column;
